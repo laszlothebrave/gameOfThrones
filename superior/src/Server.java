@@ -1,13 +1,16 @@
+import message_pack.Message;
+
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Server {
-    LinkedBlockingQueue superiorToNetwork;
-    LinkedBlockingQueue networkToSuperior;
+    LinkedBlockingQueue <Message> superiorToNetwork;
+    LinkedBlockingQueue <Message> networkToSuperior;
+    PlayerList playerList;
 
 
     public Server() {
-        superiorToNetwork = new LinkedBlockingQueue(1);
-        networkToSuperior = new LinkedBlockingQueue(1);
+        superiorToNetwork = new LinkedBlockingQueue<Message>(1);
+        networkToSuperior = new LinkedBlockingQueue<Message>(1);
     }
 
     public void start(){
@@ -29,7 +32,7 @@ public class Server {
 
     private void receiveMessage() {
         try {
-            Object message = networkToSuperior.take();
+            Message message = networkToSuperior.take();
             System.out.print( message.toString() + " - message received by superior form network\n");
             interpretMessage(message);
         } catch (InterruptedException e){
@@ -38,7 +41,7 @@ public class Server {
 
     }
 
-    private void interpretMessage(Object message){}
+    private void interpretMessage(Message message){}
 
     private void sendMessage() {
         try {
