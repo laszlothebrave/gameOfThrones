@@ -11,7 +11,7 @@ public class Game implements Runnable{
     public Player throneTrack[];
     public Player swordTrack[];
     public Player ravenTrack[];
-    public Map map;  
+    public Map map;
 
     public Game(int playersNumber, LinkedBlockingQueue queue){
         this.queue = queue;
