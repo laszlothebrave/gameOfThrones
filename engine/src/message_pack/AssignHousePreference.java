@@ -1,7 +1,7 @@
 package message_pack;
 
-import house_pack.HouseName;
-import main_pack.PlayerName;
+import data_pack.PlayerName;
+import data_pack.house_pack.HouseName;
 
 import java.io.Serializable;
 import java.util.ArrayList;

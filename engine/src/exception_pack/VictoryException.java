@@ -1,6 +1,6 @@
 package exception_pack;
 
-import main_pack.Player;
+import data_pack.Player;
 
 public class VictoryException extends Exception{
     public Player Winner;

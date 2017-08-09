@@ -1,6 +1,6 @@
 package exception_pack;
 
-import map_pack.Area;
+import data_pack.map_pack.Area;
 
 public class AreaNotFoundException extends Exception{
     public Area area;

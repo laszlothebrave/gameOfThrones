@@ -1,6 +1,6 @@
 package message_pack;
 
-import main_pack.PlayerName;
+import data_pack.PlayerName;
 
 public class Message {
     PlayerName player;
